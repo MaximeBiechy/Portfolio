@@ -152,6 +152,35 @@ header {
   text-decoration: none; /* Pas de soulignement pour le lien */
 }
 
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  gap: 20%;
+  padding: 0;
+  margin: 0;
+}
+
+.social-icons i {
+  font-size: 30px; /* Taille des icônes */
+  color: #21243d;
+}
+
+.social-icons i:hover {
+  color: #ff6464; /* Couleur de l'icône au survol */
+}
+
 /*            */
 /*   mobile   */
 /*            */
