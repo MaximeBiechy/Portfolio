@@ -1,0 +1,237 @@
+/* Style par défaut */
+/*                  */
+* {
+  min-width: 0; /* Empêche le contenu de se déformer si la largeur minimale est inférieure à zéro */
+  font: inherit; /* Utilise la police de caractères héritée */
+}
+
+*,
+*::before *::after {
+  box-sizing: border-box;
+}
+
+img,
+video,
+svg {
+  display: block; /* Les éléments images, vidéos et SVG sont affichés en bloc */
+}
+
+body {
+  margin: 0; /* Supprime la marge par défaut du corps */
+  min-height: 100vh; /* Fixe la hauteur minimale du corps à 100% de la hauteur de la vue */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance; /* Applique une mise en forme de texte équilibrée */
+}
+
+p {
+  text-wrap: pretty; /* Applique une mise en forme de texte esthétique */
+}
+
+/*  */
+/*  */
+/*  */
+
+/* Barre de navigation */
+header {
+  display: flex; /* Affiche le contenu en tant que conteneur flex */
+  justify-content: flex-end; /* Aligne le contenu sur l'extrémité droite du conteneur */
+  align-items: center; /* Aligne le contenu verticalement sur le centre du conteneur */
+  height: 7vh; /* Hauteur de 7% de la hauteur de la vue */
+}
+
+.navbar {
+  display: flex;
+}
+
+.navbar .nav-links {
+  margin-right: 5%; /* Marge à droite de 2% */
+}
+
+/* Style pour les liens de navigation */
+.navbar .nav-links {
+  display: flex;
+  justify-content: center; /* Aligne le contenu horizontalement sur le centre du conteneur */
+  align-items: center; /* Aligne le contenu verticalement sur le centre du conteneur */
+  color: #000000; /* Couleur du texte noire */
+}
+
+.navbar .nav-links a {
+  text-decoration: none; /* Pas de soulignement pour les liens */
+  color: #000000;
+  padding: 0 25px 0 0; /* Rembourrage en haut et en bas de 0 et à droite de 25px */
+}
+
+/* Style pour le lien survolé */
+.navbar .nav-links a:hover {
+  color: #ff6464; /* Couleur du texte rouge lorsqu'il est survolé */
+}
+
+/* Style pour le lien actif */
+.navbar .nav-links a.active {
+  color: #ff6464;
+  font-weight: 600;
+}
+
+/* Style pour le menu burger */
+.burger-menu {
+  display: none; /* Masque le menu burger par défaut sur les écrans non mobiles */
+  cursor: pointer; /* Curseur pointeur au survol */
+  margin-right: 5%; /* Marge à droite de 5% */
+}
+
+/* Style pour les barres du menu burger */
+.bar {
+  width: 25px; /* Largeur de la barre du menu burger */
+  height: 3px; /* Hauteur de la barre du menu burger */
+  background-color: #333; /* Couleur de fond des barres du menu burger */
+  margin: 5px 0; /* Marge autour des barres du menu burger */
+}
+
+/*            */
+/* First page */
+/*            */
+/* Style pour la première page */
+.first-page {
+  margin: 10%; /* Marge de 10% */
+}
+
+.container {
+  display: flex; /* Affiche le contenu en tant que conteneur flex */
+  justify-content: space-between; /* Distribue l'espace entre les éléments du conteneur */
+  align-items: center; /* Aligne le contenu verticalement sur le centre du conteneur */
+}
+
+/* Style pour le texte de présentation */
+#presentation {
+  color: #21243d; /* Couleur du texte */
+  font-weight: bold; /* Poids de la police en gras */
+  font-size: 44px; /* Taille de la police */
+  margin: 0; /* Pas de marge */
+}
+
+/* Style pour le texte de description */
+#description {
+  color: #21243d; /* Couleur du texte */
+  font-weight: normal; /* Poids de la police normal */
+  font-size: 16px; /* Taille de la police */
+  margin: 5% 20% 5% 0; /* Marge */
+}
+
+/* Style pour l'image de profil */
+#myself {
+  display: flex; /* Affiche le contenu en tant que conteneur flex */
+  justify-content: center; /* Aligne le contenu horizontalement sur le centre */
+  align-items: center; /* Aligne le contenu verticalement sur le centre */
+  border-radius: 50%; /* Arrondit les coins de l'image pour qu'elle forme un rond */
+  object-fit: cover; /* Redimensionne l'image pour remplir le conteneur en conservant son ratio d'aspect */
+  object-position: top; /* Positionne l'image en haut */
+  width: 30vh; /* Largeur de l'image */
+  height: 30vh; /* Hauteur de l'image */
+}
+
+/* Style pour le bouton de téléchargement du CV */
+.download-resume {
+  color: #ffffff; /* Couleur du texte */
+  background-color: #ff6464; /* Couleur de fond */
+  padding: 1% 4%; /* Rembourrage */
+  border-radius: 2px; /* Arrondit les coins du bouton */
+  cursor: pointer; /* Curseur pointeur au survol */
+  border: none; /* Pas de bordure */
+}
+
+/* Style pour le lien du bouton de téléchargement du CV */
+.download-resume a {
+  color: #ffffff; /* Couleur du texte du lien */
+  text-decoration: none; /* Pas de soulignement pour le lien */
+}
+
+/*            */
+/*   mobile   */
+/*            */
+@media screen and (max-width: 768px) {
+  .navbar {
+    margin-right: 5%;
+  }
+
+  .navbar .burger-menu {
+    display: block; /* Affiche le menu burger sur les appareils mobiles */
+  }
+
+  .navbar.active {
+    display: flex;
+    flex-direction: column; /* Affiche les éléments verticalement */
+    justify-content: flex-start; /* Aligne le contenu horizontalement sur l'extrémité gauche du conteneur */
+    align-items: flex-end;
+    margin: 5% 0 0 0;
+    top: 0;
+    right: 0;
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+  }
+
+  .navbar.active .nav-links {
+    display: flex;
+    flex-direction: column; /* Affiche les éléments verticalement */
+    justify-content: center; /* Aligne le contenu horizontalement sur le centre */
+    align-items: center; /* Aligne le contenu verticalement sur le centre */
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+  }
+
+  .navbar .nav-links {
+    display: none;
+  }
+
+  .navbar .nav-links a {
+    padding: 20px 0; /* Rembourrage en haut et en bas de 20px et à droite de 0 */
+    margin: 0 20px; /* Marge en haut et en bas de 0 et à droite de 20px */
+    border-bottom: 1px solid #000000; /* Bordure en bas de 1px solide noire */
+  }
+
+  .container {
+    display: flex; /* Affiche le contenu en tant que conteneur flex */
+    justify-content: center; /* Aligne le contenu horizontalement sur le centre */
+    align-items: center; /* Aligne le contenu verticalement sur le centre */
+    flex-wrap: wrap-reverse; /* Inverse l'enroulement des éléments */
+  }
+
+  .left-side {
+    display: flex; /* Affiche le contenu en tant que conteneur flex */
+    flex-direction: column; /* Affiche les éléments verticalement */
+    justify-content: center; /* Aligne le contenu horizontalement sur le centre */
+    align-items: center; /* Aligne le contenu verticalement sur le centre */
+  }
+
+  .download-resume {
+    padding: 3% 6%; /* Rembourrage */
+  }
+
+  #presentation {
+    font-size: 32px; /* Taille de la police */
+    margin: 10% 0; /* Marge */
+    text-align: center; /* Alignement du texte au centre */
+  }
+
+  #description {
+    font-size: 14px; /* Taille de la police */
+    margin: 0 0 10% 0; /* Marge */
+    text-align: center; /* Alignement du texte au centre */
+  }
+
+  #myself {
+    width: 20vh; /* Largeur de l'image */
+    height: 20vh; /* Hauteur de l'image */
+  }
+}
