@@ -44,15 +44,11 @@ header {
   display: flex; /* Affiche le contenu en tant que conteneur flex */
   justify-content: flex-end; /* Aligne le contenu sur l'extrémité droite du conteneur */
   align-items: center; /* Aligne le contenu verticalement sur le centre du conteneur */
-  height: 40px; /* Hauteur de 40px */
+  height: auto;
 }
 
 .navbar {
   display: flex;
-}
-
-.navbar .nav-links {
-  margin-right: 5%; /* Marge à droite de 2% */
 }
 
 /* Style pour les liens de navigation */
@@ -81,10 +77,13 @@ header {
 }
 
 /* Style pour le menu burger */
-.burger-menu {
+.navbar .burger-menu {
   display: none; /* Masque le menu burger par défaut sur les écrans non mobiles */
   cursor: pointer; /* Curseur pointeur au survol */
-  margin-right: 5%; /* Marge à droite de 5% */
+  top: 0; /* Position en haut */
+  right: 0; /* Position à droite */
+  padding: 5% 5% 0 0;
+  position: fixed;
 }
 
 /* Style pour les barres du menu burger */
@@ -92,7 +91,7 @@ header {
   width: 25px; /* Largeur de la barre du menu burger */
   height: 3px; /* Hauteur de la barre du menu burger */
   background-color: #333; /* Couleur de fond des barres du menu burger */
-  margin: 5px 0; /* Marge autour des barres du menu burger */
+  margin: 0 0 5px 0; /* Marge autour des barres du menu burger */
 }
 
 /*            */
@@ -185,10 +184,6 @@ footer {
 /*   mobile   */
 /*            */
 @media screen and (max-width: 768px) {
-  .navbar {
-    margin-right: 5%;
-  }
-
   .navbar .burger-menu {
     display: block; /* Affiche le menu burger sur les appareils mobiles */
   }
@@ -198,11 +193,11 @@ footer {
     flex-direction: column; /* Affiche les éléments verticalement */
     justify-content: center;
     align-items: flex-end;
-    margin: 5% 0 0 0;
+    margin: 0;
     top: 0;
     right: 0;
     position: absolute;
-    height: 100dvh;
+    height: 100%;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(5px);
@@ -215,9 +210,6 @@ footer {
     align-items: center; /* Aligne le contenu verticalement sur le centre */
     height: 100%;
     width: 100%;
-    margin: 0;
-    background-color: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(5px);
   }
 
   .navbar .nav-links {

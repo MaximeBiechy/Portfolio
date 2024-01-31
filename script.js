@@ -2,17 +2,10 @@
 const burgerMenu = document.querySelector(".burger-menu");
 const navbar = document.querySelector(".navbar");
 const navLinks = document.querySelectorAll(".nav-links a");
-const footer = document.getElementById("footer");
 
 // On ajoute un événement au clic sur le burger menu
 burgerMenu.addEventListener("click", () => {
   navbar.classList.toggle("active");
-  // On affiche ou on cache le footer
-  if (footer.style.display === "none") {
-    footer.style.display = "flex";
-  } else {
-    footer.style.display = "none";
-  }
 });
 
 // On ajoute un événement au clic sur les liens du menu pour fermer le menu burger et activer le dernier lien cliqué
