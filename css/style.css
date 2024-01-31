@@ -44,7 +44,7 @@ header {
   display: flex; /* Affiche le contenu en tant que conteneur flex */
   justify-content: flex-end; /* Aligne le contenu sur l'extrémité droite du conteneur */
   align-items: center; /* Aligne le contenu verticalement sur le centre du conteneur */
-  height: 7vh; /* Hauteur de 7% de la hauteur de la vue */
+  height: 40px; /* Hauteur de 40px */
 }
 
 .navbar {
@@ -100,7 +100,7 @@ header {
 /*            */
 /* Style pour la première page */
 .first-page {
-  margin: 10%; /* Marge de 10% */
+  margin: 9%; /* Marge de 10% */
 }
 
 .container {
@@ -113,7 +113,7 @@ header {
 #presentation {
   color: #21243d; /* Couleur du texte */
   font-weight: bold; /* Poids de la police en gras */
-  font-size: 44px; /* Taille de la police */
+  font-size: 8dvh; /* Taille de la police */
   margin: 0; /* Pas de marge */
 }
 
@@ -121,7 +121,7 @@ header {
 #description {
   color: #21243d; /* Couleur du texte */
   font-weight: normal; /* Poids de la police normal */
-  font-size: 16px; /* Taille de la police */
+  font-size: 3dvh; /* Taille de la police */
   margin: 5% 20% 5% 0; /* Marge */
 }
 
@@ -154,7 +154,6 @@ header {
 }
 
 footer {
-  position: absolute;
   bottom: 0;
   width: 100%;
   height: auto;
@@ -250,13 +249,13 @@ footer {
   }
 
   #presentation {
-    font-size: 32px; /* Taille de la police */
+    font-size: 6dvh; /* Taille de la police */
     margin: 10% 0; /* Marge */
     text-align: center; /* Alignement du texte au centre */
   }
 
   #description {
-    font-size: 14px; /* Taille de la police */
+    font-size: 3dvh; /* Taille de la police */
     margin: 0 0 10% 0; /* Marge */
     text-align: center; /* Alignement du texte au centre */
   }
